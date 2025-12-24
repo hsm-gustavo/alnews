@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/hsm-gustavo/alnews/internal/cache"
@@ -25,8 +24,6 @@ func listCmd(limit uint8, refetch bool, searchParam string, openIndex int8, insp
 	var feed model.RSS
 
 	if cm.Exists() && cm.IsFresh(12*time.Hour) && !refetch {
-		fmt.Println("cache hit")
-
 		if err := cm.ReadJSON(&feed); err != nil {
 			return err
 		}
