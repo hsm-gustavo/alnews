@@ -1,4 +1,4 @@
-module github.com/hsm-gustavo/arch-notify
+module github.com/hsm-gustavo/alnews
 
 go 1.25.5
 
